@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+<head>
+  <script src= "angular/angular.js"></script>
+</head>
+<body>
+
+<div class="ng-cloak" ng-controller="wordController as wc">
+  <form class="simple-form">
+    <input type="text" placeholder="Type a new word!" ng-model="wc.word"/>
+    <input type="submit" ng-click="wc.addWord()" value="Add" />
+  </form>
+  <p>Found: {{wc.words.length}}</p>
+  <ul>
+    <li ng-repeat="word in wc.words">{{word.text}}</li>
+  </ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
